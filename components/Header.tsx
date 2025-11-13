@@ -38,7 +38,7 @@ export default function Header(headerProps: HeaderProps) {
                             </Link>
                             <div className="flex items-center gap-4">
                                 <div className="text-right">
-                                    <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white font-kaushan">Photo Gallery</h1>
+                                    <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white font-kaushan"><Link href="/">Photo Gallery</Link></h1>
                                     <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">Powered by <Link href="https://picsum.photos/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-100">Lorem Picsum</Link></p>
                                 </div>
                             </div>

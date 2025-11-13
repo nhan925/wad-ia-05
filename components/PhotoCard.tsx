@@ -11,7 +11,7 @@ interface PhotoCardProps {
 export default function PhotoCard({ photo }: PhotoCardProps) {
   return (
     <Link href={`/photos/${photo.id}`}>
-      <div className="group relative overflow-hidden rounded-lg bg-gray-100 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+      <div className="group relative overflow-hidden rounded-lg bg-gray-100 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:drop-shadow-lg hover:drop-shadow-indigo-500/50 cursor-pointer">
         <div className="aspect-square relative">
           <Image
             src={`https://picsum.photos/id/${photo.id}/400/400`}
@@ -20,9 +20,9 @@ export default function PhotoCard({ photo }: PhotoCardProps) {
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+        <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300">
           <p className="font-semibold truncate">{photo.author}</p>
           <p className="text-sm text-gray-200">ID: {photo.id}</p>
         </div>

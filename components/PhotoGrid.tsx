@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import PhotoCard from "./PhotoCard";
-import LoadingSpinner from "./LoadingSpinner";
+import { Spinner } from "./ui/spinner";
 import { Photo } from "@/types/photo";
 
-const PHOTOS_PER_PAGE = 12;
+const PHOTOS_PER_PAGE = 16;
 
 export default function PhotoGrid() {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -75,7 +75,11 @@ export default function PhotoGrid() {
         ))}
       </div>
 
-      {loading && <LoadingSpinner />}
+      {loading &&
+        <div className="flex justify-center py-16">
+          <Spinner className="size-12 text-blue-500" />
+        </div>
+      }
 
       {error && (
         <div className="text-center py-8 text-red-600">

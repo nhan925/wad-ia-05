@@ -1,25 +1,10 @@
 import PhotoGrid from "@/components/PhotoGrid";
-import Link from "next/link";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Photo Gallery</h1>
-              <p className="text-gray-600 mt-1">Powered by Lorem Picsum</p>
-            </div>
-            <Link
-              href="/"
-              className="text-blue-600 hover:text-blue-800 font-medium"
-            >
-              Home
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <PhotoGrid />

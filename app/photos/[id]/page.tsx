@@ -35,7 +35,7 @@ export default async function PhotoDetailPage({ params }: PhotoDetailPageProps) 
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 flex-col flex">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex-col flex">
       <Header subPage={true}/>
 
       <main className="mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex flex-1 justify-center md:items-center">
@@ -135,54 +135,54 @@ export default async function PhotoDetailPage({ params }: PhotoDetailPageProps) 
           </div>
 
           {/* Info Card (Mobile Only) */}
-          <div className="md:hidden bg-white rounded-2xl shadow-xl p-6">
+          <div className="md:hidden bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
             <div className="space-y-4">
               {/* Title and ID */}
               <div>
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">
                   Photo Details
                 </h2>
-                <h1 className="text-3xl font-bold text-gray-900">
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                   Photo #{photo.id}
                 </h1>
               </div>
 
               {/* Author */}
-              <div className="border-l-4 border-blue-500 pl-4">
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              <div className="border-l-4 border-blue-500 dark:border-blue-400 pl-4">
+                <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                   Author
                 </p>
-                <p className="text-2xl font-semibold text-gray-900 mt-1">
+                <p className="text-2xl font-semibold text-gray-900 dark:text-white mt-1">
                   {photo.author}
                 </p>
               </div>
 
               {/* Dimensions */}
               <div className="flex gap-4">
-                <div className="bg-gray-50 rounded-lg px-4 py-3 flex-1">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg px-4 py-3 flex-1">
+                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Width
                   </p>
-                  <p className="text-lg font-bold text-gray-900 mt-1">
+                  <p className="text-lg font-bold text-gray-900 dark:text-white mt-1">
                     {photo.width}px
                   </p>
                 </div>
-                <div className="bg-gray-50 rounded-lg px-4 py-3 flex-1">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg px-4 py-3 flex-1">
+                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Height
                   </p>
-                  <p className="text-lg font-bold text-gray-900 mt-1">
+                  <p className="text-lg font-bold text-gray-900 dark:text-white mt-1">
                     {photo.height}px
                   </p>
                 </div>
               </div>
 
               {/* Description */}
-              <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm font-semibold text-blue-900 uppercase tracking-wide mb-2">
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 uppercase tracking-wide mb-2">
                   Description
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   This stunning photograph captured by {photo.author} showcases 
                   exceptional composition and artistic vision. The image has been 
                   featured in the Lorem Picsum collection, a curated gallery of 
@@ -196,7 +196,7 @@ export default async function PhotoDetailPage({ params }: PhotoDetailPageProps) 
                   href={photo.download_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                  className="bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors text-center"
                 >
                   Download Original
                 </a>
@@ -204,7 +204,7 @@ export default async function PhotoDetailPage({ params }: PhotoDetailPageProps) 
                   href={photo.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
+                  className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-center"
                 >
                   View Full Size
                 </a>

@@ -11,7 +11,7 @@ interface PhotoCardProps {
 export default function PhotoCard({ photo }: PhotoCardProps) {
   return (
     <Link href={`/photos/${photo.id}`}>
-      <div className="group relative overflow-hidden rounded-lg bg-gray-100 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:drop-shadow-lg hover:drop-shadow-indigo-500/50 cursor-pointer">
+      <div className="group relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:drop-shadow-lg hover:drop-shadow-indigo-500/50 dark:hover:drop-shadow-yellow-500/50 cursor-pointer">
         <div className="aspect-square relative">
           <Image
             src={`https://picsum.photos/id/${photo.id}/400/400`}

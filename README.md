@@ -40,7 +40,7 @@ npm run lint   # Run ESLint
 ### 📸 Photo Grid Display
 - **Responsive Grid Layout**: Adapts from 1 to 4 columns based on screen size
 - **Thumbnail Images**: Optimized 400x400px images for fast loading
-- **Author Information**: Displayed on hover with smooth transitions
+- **Author Information**: Displayed on hover (desktop) or always visible (mobile)
 - **Interactive Hover Effects**: Scale transformation and shadow effects
 
 ### ♾️ Infinite Scroll
@@ -50,6 +50,12 @@ npm run lint   # Run ESLint
 - **End Detection**: Shows "No more photos" message when list ends
 - **Error Handling**: Retry functionality for failed requests
 - **Performance**: Prevents multiple simultaneous requests
+
+### 🌓 Dark Mode
+- **Theme Toggle**: Switch between light and dark modes
+- **Persistent Preference**: Saves your theme choice to localStorage
+- **System Preference**: Respects your OS color scheme on first visit
+- **Smooth Transitions**: Seamless theme switching across all components
 
 ### 🖼️ Photo Detail View
 - **Full-size Display**: View images at 1200x1200px resolution
@@ -267,6 +273,22 @@ Potential features to add:
 - 🔎 Image zoom on detail page
 - 💾 Offline support with service worker
 - 📱 Progressive Web App (PWA) features
+
+---
+
+## 🚀 Deployment
+
+- Deploy on Vercel for full Next.js features without limitations:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+- Or connect your GitHub repo to Vercel for automatic deployments.
 
 ---
 

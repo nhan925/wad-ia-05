@@ -22,6 +22,11 @@ const kaushanScript = Kaushan_Script({
 export const metadata: Metadata = {
   title: "Photo Gallery - Lorem Picsum",
   description: "Browse and explore beautiful photos from Lorem Picsum API",
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({

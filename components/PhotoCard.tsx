@@ -8,6 +8,7 @@ interface PhotoCardProps {
   photo: Photo;
 }
 
+// PhotoCard component to display individual photo cards
 export default function PhotoCard({ photo }: PhotoCardProps) {
   return (
     <Link href={`/photos/${photo.id}`}>

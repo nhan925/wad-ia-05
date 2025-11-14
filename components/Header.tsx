@@ -11,7 +11,8 @@ interface HeaderProps {
 export default function Header(headerProps: HeaderProps) {
     const { subPage } = headerProps;
     return (
-        !subPage ?   
+        !subPage ?  
+            // Main Page Header    
             (
                 <header className="bg-white/50 dark:bg-gray-900/50 shadow-sm sticky top-0 z-10 backdrop-blur-xl">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -28,6 +29,7 @@ export default function Header(headerProps: HeaderProps) {
                 </header>
             )
             :
+            // Sub Page Header
             (
                   <header className="bg-white/50 dark:bg-gray-900/50 shadow-sm sticky top-0 z-10 backdrop-blur-xl">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

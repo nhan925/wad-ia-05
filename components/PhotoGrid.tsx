@@ -5,8 +5,9 @@ import PhotoCard from "./PhotoCard";
 import { Spinner } from "./ui/spinner";
 import { Photo } from "@/types/photo";
 
-const PHOTOS_PER_PAGE = 16;
+const PHOTOS_PER_PAGE = 16; // Number of photos to fetch per page
 
+// PhotoGrid component to display a grid of photos with infinite scrolling
 export default function PhotoGrid() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [page, setPage] = useState(1);
@@ -15,6 +16,7 @@ export default function PhotoGrid() {
   const [error, setError] = useState<string | null>(null);
   const observerTarget = useRef<HTMLDivElement>(null);
 
+  // Function to fetch photos from the API
   const fetchPhotos = useCallback(async (pageNum: number) => {
     try {
       setLoading(true);
@@ -41,10 +43,12 @@ export default function PhotoGrid() {
     }
   }, []);
 
+  // Fetch photos when the page number changes
   useEffect(() => {
     fetchPhotos(page);
   }, [page, fetchPhotos]);
 
+  // Set up intersection observer for infinite scrolling
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
